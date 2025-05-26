@@ -1,0 +1,90 @@
+/* High Contrast Mode Styles */
+.high-contrast {
+  --background: #000000;
+  --foreground: #ffffff;
+  --card: #000000;
+  --card-foreground: #ffffff;
+  --popover: #000000;
+  --popover-foreground: #ffffff;
+  --primary: #ffff00;
+  --primary-foreground: #000000;
+  --secondary: #ffffff;
+  --secondary-foreground: #000000;
+  --muted: #222222;
+  --muted-foreground: #ffffff;
+  --accent: #ffff00;
+  --accent-foreground: #000000;
+  --destructive: #ff0000;
+  --destructive-foreground: #ffffff;
+  --border: #ffffff;
+  --input: #ffffff;
+  --ring: #ffff00;
+
+  /* Increase contrast for all text */
+  --text-contrast: 1.5;
+
+  /* Increase focus outlines */
+  --focus-ring-width: 3px;
+}
+
+.high-contrast * {
+  border-color: var(--border);
+}
+
+.high-contrast a {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+.high-contrast button:focus,
+.high-contrast a:focus,
+.high-contrast input:focus,
+.high-contrast select:focus,
+.high-contrast textarea:focus {
+  outline: var(--focus-ring-width) solid var(--ring);
+  outline-offset: 2px;
+}
+
+.high-contrast img {
+  filter: contrast(var(--text-contrast));
+}
+
+.high-contrast .text-muted-foreground {
+  color: #cccccc;
+}
+
+.high-contrast .bg-muted {
+  background-color: #222222;
+}
+
+.high-contrast .border {
+  border-color: var(--border);
+  border-width: 2px;
+}
+
+/* Improve form controls */
+.high-contrast input,
+.high-contrast select,
+.high-contrast textarea {
+  border: 2px solid var(--border);
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* Improve button contrast */
+.high-contrast .btn,
+.high-contrast button {
+  border: 2px solid var(--border);
+}
+
+/* Add focus indicators for interactive elements */
+.high-contrast [role="button"],
+.high-contrast [tabindex="0"] {
+  cursor: pointer;
+}
+
+.high-contrast [role="button"]:focus,
+.high-contrast [tabindex="0"]:focus {
+  outline: var(--focus-ring-width) solid var(--ring);
+  outline-offset: 2px;
+}
